@@ -119,7 +119,7 @@ prisma/
 - **Server Components by default**: Dashboard page fetches data server-side, serializes it, and passes to client components. No unnecessary client-side data fetching.
 - **Server Actions for mutations**: Task CRUD operations use server actions with `revalidatePath` instead of API routes, reducing boilerplate and keeping mutations collocated.
 - **Route groups**: `(auth)` and `(dashboard)` route groups separate public and protected layouts without affecting URLs.
-- **SQLite + Prisma**: Chosen for simplicity and zero-configuration setup. Can be swapped to PostgreSQL by changing the datasource in `schema.prisma`.
+- **SQLite + Prisma**: Chosen for simplicity and zero-configuration setup.
 - **Session-based auth with JWT strategy**: Keeps the stack simple with no external auth service dependency.
 
 ## Deployment
@@ -131,4 +131,3 @@ Deploy to Vercel:
 3. Set environment variables (`AUTH_SECRET`, `DATABASE_URL`)
 4. Deploy
 
-For production, consider switching from SQLite to PostgreSQL with the appropriate Prisma adapter.
